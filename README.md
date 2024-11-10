@@ -1,51 +1,57 @@
+# AI Agent Project
+This project is an AI-powered agent that performs web searches, extracts specific information based on user-defined prompts, and displays or downloads the results in a user-friendly interface.
 
-# **README.md for AI Agent Project**
+###  Features
+File Upload: Upload a CSV file to analyze data for multiple entities.
+Custom Query Input: Enter custom queries with placeholders for dynamic information extraction.
+Automated Web Search: Uses ScraperAPI to gather relevant data from the web.
+Data Extraction with OpenAI: Extracts specific information from search results using OpenAI's LLM.
+Data Display and Export: View extracted data in a table with an option to download it as a CSV.
+Prerequisites
+Python 3.x: Make sure Python is installed on your system.
+OpenAI API Key: You need an OpenAI API key to use the language model for data extraction.
+ScraperAPI Key: You need a ScraperAPI key for automated web search functionality.
 
-**Project Description**
-This project aims to develop an AI agent that can read data from a CSV file or Google Sheets, perform web searches based on user-defined queries, and extract relevant information using a large language model (LLM). The agent will provide a user-friendly dashboard where users can upload their data, define search queries, and view or download the extracted results.
+**Setup and Installation**
 
-**Features**
-File Upload & Google Sheets Integration: Users can upload CSV files or connect to Google Sheets to input data.
-Dynamic Query Input: Users can specify custom prompts for information retrieval, utilizing placeholders for dynamic entity replacement.
-Automated Web Search: The agent conducts web searches for each entity and gathers relevant results.
-LLM Integration: Extracts specific information from web search results using an LLM.
-User-Friendly Dashboard: Displays extracted data in a structured format with options to download results as CSV or update Google Sheets.
 
-**Technical Stack**
-Dashboard/UI: Streamlit or Flask
-Data Handling: Pandas for CSV management; Google Sheets API for integration
-Search API: SerpAPI, ScraperAPI, or similar
-LLM API: Groq or OpenAI’s GPT API
-Backend: Python
-Agents: Langchain
+## Step 1: Clone the Repository
+Clone this repository to your local machine:
 
-**Setup Instructions**
+git clone https://github.com/yourusername/ai_agent_project.git
+cd ai_agent_project
+## Step 2: Set Up a Virtual Environment
+Create and activate a virtual environment to manage dependencies:
 
-Clone the repository:
-```bash
-git clone https://github.com/yourusername/ai-agent-project.git
-cd ai-agent-project
+# Create a virtual environment
+python -m venv venv
 
-**Install dependencies:**
-```bash
-pip install -r requirements.txt
+# Activate the virtual environment
+# On Windows
+venv\Scripts\activate
+# On macOS/Linux
+source venv/bin/activate
+## Step 3: Install Dependencies
+Use requirements.txt to install the necessary libraries:
 
-**Set up environment variables:**
+pip install -r src/requirements.txt
+## Step 4: Set Up Environment Variables
+Create a .env File: In the root directory of the project, create a file named .env.
 
-Create a .env file in the root directory and add your API keys:
-text
-GOOGLE_SHEET_API_KEY=your_google_sheet_api_key
-SERPAPI_KEY=your_serpapi_key
-LLM_API_KEY=your_llm_api_key
+Add Your API Keys: Open .env and add your ScraperAPI and OpenAI API keys as follows:
 
-**Usage Guide**
-Run the application:
-```bash
-streamlit run app.py  # If using Streamlit
-# OR 
-python app.py          # If using Flask
+SCRAPER_API_KEY=your_scraperapi_key_here
+OPENAI_API_KEY=your_openai_api_key_here
+Add .env to .gitignore: Make sure .env is listed in .gitignore to prevent accidental sharing of API keys.
 
-Access the dashboard in your web browser at http://localhost:8501 (Streamlit) or http://localhost:5000 (Flask).
-Upload your CSV file or connect to a Google Sheet.
-Define your search query using placeholders (e.g., "Get me the email address of {company}").
-View and download the extracted results.
+## Step 5: Running the Application
+To start the application, use Streamlit:
+
+streamlit run src/main.py
+This command will open the application in your web browser.
+
+**Usage**
+Upload CSV File: Upload a CSV file containing a list of entities (e.g., company names) in one column.
+Define a Query: Enter a query prompt with placeholders, e.g., Find the email of {company}.
+Run Extraction: Click "Run Extraction" to perform searches and extract information for each entity.
+View and Download Results: The extracted data will appear in a table format. Click "Download CSV" to save the results.
