@@ -22,15 +22,16 @@ Agents: Langchain
 **Setup Instructions**
 
 Clone the repository:
-bash
+```bash
 git clone https://github.com/yourusername/ai-agent-project.git
 cd ai-agent-project
 
 **Install dependencies:**
-bash
+```bash
 pip install -r requirements.txt
 
 **Set up environment variables:**
+
 Create a .env file in the root directory and add your API keys:
 text
 GOOGLE_SHEET_API_KEY=your_google_sheet_api_key
@@ -39,7 +40,7 @@ LLM_API_KEY=your_llm_api_key
 
 **Usage Guide**
 Run the application:
-bash
+```bash
 streamlit run app.py  # If using Streamlit
 # OR 
 python app.py          # If using Flask
