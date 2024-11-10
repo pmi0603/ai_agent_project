@@ -2,10 +2,14 @@ import streamlit as st
 import pandas as pd
 import openai
 import requests
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Set up API keys
-SCRAPER_API_KEY = "a4cd3c1181fed3408ec4971028c0e200"  # Replace with your ScraperAPI key
-OPENAI_API_KEY = "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"  # Replace with your OpenAI key
+SCRAPER_API_KEY = os.getenv("SCRAPER_API_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 openai.api_key = OPENAI_API_KEY
 
 # Streamlit app title
