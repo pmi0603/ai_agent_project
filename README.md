@@ -9,8 +9,10 @@ Data Extraction with OpenAI: Extracts specific information from search results u
 Data Display and Export: View extracted data in a table with an option to download it as a CSV.
 Prerequisites
 Python 3.x: Make sure Python is installed on your system.
-OpenAI API Key: You need an OpenAI API key to use the language model for data extraction.
-ScraperAPI Key: You need a ScraperAPI key for automated web search functionality.
+OpenAI API Key: **You need an OpenAI API key to use the language model for data extraction.**
+ScraperAPI Key: **You need a ScraperAPI key for automated web search functionality.**
+
+PS:**You need to add API's in .env file in root folder, other wise will encounter error401.** 
 
 **Setup and Installation**
 
