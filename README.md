@@ -55,3 +55,8 @@ Upload CSV File: Upload a CSV file containing a list of entities (e.g., company 
 Define a Query: Enter a query prompt with placeholders, e.g., Find the email of {company}.
 Run Extraction: Click "Run Extraction" to perform searches and extract information for each entity.
 View and Download Results: The extracted data will appear in a table format. Click "Download CSV" to save the results.
+
+## Project Demonstration
+
+Watch a walkthrough of the project on Loom: [Project Demo](https://drive.google.com/file/d/1r-ClkT4OMgpntpFjAsLo2uDGZm7Xl4_1/view?usp=sharing)
+
